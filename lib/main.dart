@@ -1,20 +1,12 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
+import 'utils/theme.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(FlickrApp());
 
-class MyApp extends StatelessWidget {
+class FlickrApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
+    return MaterialApp(title: "Flickr", theme: appThemeData, home: Home());
   }
 }
