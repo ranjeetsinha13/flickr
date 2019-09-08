@@ -11,3 +11,9 @@ final ThemeData appThemeData = new ThemeData(
           fontSize: 16.0, fontStyle: FontStyle.normal, color: Colors.black87),
       body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
     ));
+
+final TextStyle movieListTextStyle =
+    TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 27);
+
+final TextStyle movieRatingTextStyle =
+    TextStyle(color: Colors.yellow, fontWeight: FontWeight.bold, fontSize: 35);
