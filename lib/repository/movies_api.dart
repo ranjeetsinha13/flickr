@@ -11,10 +11,10 @@ class MoviesApi {
 
   static const _listType = ['popular', 'top_rated', 'upcoming'];
 
-  Future<MovieModel> fetchMovieList(String type) async {
+  Future<MovieModel> fetchMovieList(String type, {int page =1}) async {
     Response response;
     if (_apiKey == TMDB_API_KEY && _listType.contains(type)) {
-      response = await client.get("$_baseUrl/$type?api_key=$_apiKey");
+      response = await client.get("$_baseUrl/$type?api_key=$_apiKey&page=$page");
     } else {
       throw Exception('Please add your API key');
     }
